@@ -1,3 +1,14 @@
+@keyframes name-move-and-fade {
+    from {
+        color: rgba(255, 255, 255, 0);
+        top: 0%;
+    }
+    to {
+        color: rgba(255, 255, 255, 1);
+        top: 15%;
+    }
+}
+
 .container {
     position: relative;
     text-align: center;
@@ -20,14 +31,18 @@
 .header-name {
     /* Positioning */
     position: absolute;
-    top: 45%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     /* Font & Color */
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 70px;
+
+    /* Animation */
+    animation-name: name-move-and-fade;
+    animation-duration: 2s;
 }
 
 
