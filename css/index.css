@@ -10,6 +10,15 @@
     }
 }
 
+@keyframes img-links-fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .page-wrap {
     width: 2050px;
     margin: 0 auto;
@@ -58,8 +67,22 @@
     left: -500px;
     
     /* TODO: animate the projects box, make it a link, and 
-    add the about me box and do the same
+    add the about me box and do the same */
+
+    /* Animation */
     
+    
+}
+
+#projects-img {
+    opacity: 0;
+
+    animation-name: img-links-fadein;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+    border: 5px solid rgb(200,200,200);
 }
 
 
