@@ -6,7 +6,7 @@
     }
     to {
         color: rgba(255, 255, 255, 1);
-        top: 15%;
+        top: 9%;
     }
 }
 
@@ -20,7 +20,7 @@
 }
 
 .page-wrap {
-    width: 2050px;
+    width: 1200px;
     margin: 0 auto;
 }
 
@@ -32,21 +32,18 @@
 .header-bg-img {
     /* Position Image*/
     position: relative;
-    left: -20px;
+    left: -500px;
     top: -20px;
 
     /* Blur */
     filter: blur(6px);
     -webkit-filter: blur(px);
-
-    /* Feather */
-    box-shadow: 30px 10px 2px rgba(0,0,0,0.6);
 } 
 
 .header-name {
     /* Positioning */
     position: absolute;
-    top: 15%;
+    top: 9%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -63,26 +60,44 @@
 .header-projects-box {
     /* Positioning */
     position: relative;
-    top: -575px;
+    top: -680px;
     left: -500px;
-    
-    /* TODO: animate the projects box, make it a link, and 
-    add the about me box and do the same */
+}
 
-    /* Animation */
-    
-    
+.header-about-box {
+    /* Positioning */
+    position: relative;
+    top: -1055px;
+    left: 500px;
 }
 
 #projects-img {
+    /* Border */
+    border: 5px solid rgb(200,200,200);
+
+    /* Set opacity before animation to avoid glitches */
     opacity: 0;
 
+    /* Animation */
     animation-name: img-links-fadein;
     animation-delay: 2s;
     animation-duration: 3s;
     animation-fill-mode: forwards;
-
-    border: 5px solid rgb(200,200,200);
 }
+
+#about-img {
+    /* Border */
+    border: 5px solid rgb(200,200,200);
+
+    /* Set opacity before animation to avoid glitches */
+    opacity: 0;
+
+    /* Animation */
+    animation-name: img-links-fadein;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
 
 
