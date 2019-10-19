@@ -6,10 +6,11 @@
     }
     to {
         color: rgba(255, 255, 255, 1);
-        top: 9%;
+        top: 10%;
     }
 }
 
+/* Box-link animations */
 @keyframes img-links-fadein {
     from {
         opacity: 0;
@@ -19,6 +20,19 @@
     }
 }
 
+@keyframes bg-img-hover {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.25, 1.25);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+/* Remove scrolling and excess white space */
 html, body {
     margin: 0;
     height: 100%;
@@ -49,7 +63,7 @@ html, body {
 .header-name {
     /* Positioning */
     position: absolute;
-    top: 9%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -105,5 +119,11 @@ html, body {
     animation-fill-mode: forwards;
 }
 
+#bg-img {
+    width: 2100px;
+    height: 1050px;
 
-
+    animation-name: bg-img-hover;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
