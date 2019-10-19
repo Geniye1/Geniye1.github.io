@@ -19,9 +19,15 @@
     }
 }
 
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
 .page-wrap {
     width: 1200px;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 .header-container {
