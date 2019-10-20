@@ -20,6 +20,7 @@
     }
 }
 
+/* Background image hover effect */
 @keyframes bg-img-hover {
     0% {
         transform: scale(1, 1);
@@ -120,9 +121,11 @@ html, body {
 }
 
 #bg-img {
+    /* Scaling */
     width: 2100px;
     height: 1050px;
 
+    /* Animation */
     animation-name: bg-img-hover;
     animation-duration: 40s;
     animation-iteration-count: infinite;
