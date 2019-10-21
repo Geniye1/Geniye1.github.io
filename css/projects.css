@@ -21,13 +21,20 @@
 
 .footnote-decor {
     position: absolute;
-    background-color: rgb(122, 135, 135);
+    background-color: rgba(122, 135, 135, 0.4);
 
     bottom: -500px;
     left: 750px;
 
     width: 500px;
     height: 2px;
+}
+
+.footnote {
+    position: relative;
+
+    top: -35px;
+    left: 50px;
 }
 
 #bkg-img {
@@ -67,6 +74,15 @@
 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 35px;
+}
+
+#footnote-text {
+    text-align: center;
+
+    color: rgba(122, 135, 135, 0.6);
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
 }
 
 
