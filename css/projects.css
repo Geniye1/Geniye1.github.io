@@ -1,3 +1,7 @@
+.page-wrap {
+    overflow-x: hidden;
+}
+
 .pr1 {
     position: relative;
 
