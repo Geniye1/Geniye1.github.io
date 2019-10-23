@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "The backend for a portfolio website displaying all my projects and such.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "g3n_1y3",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
