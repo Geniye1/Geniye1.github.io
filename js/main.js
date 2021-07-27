@@ -8,8 +8,8 @@ function init() {
 
     world = new World(rendererContainer);
     
-    const floor = createFloor(0, 0, 0, 7, 0.5, 100);
-    world.addSceneObject(floor);
+    const floor = createFloor(0, 0, 0, 7, 0.5, 500);
+    world.addObject(floor);
     
     world.start();
     generateFortress();

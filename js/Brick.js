@@ -63,6 +63,10 @@ function createFloor(x, y, z, w, h, d) {
 
     floorWire.position.set(x, y, z);
 
+    floorWire.tick = (dt) => {
+        floorWire.position.set(0, 0, camera.position.z);
+    }
+
     return floorWire;
 }
 
