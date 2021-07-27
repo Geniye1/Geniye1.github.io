@@ -11,7 +11,7 @@ function createCamera(aspectRatio) {
         100
     );
     
-    camera.position.set(0, -1, 15);
+    camera.position.set(0, 4, 15);
 
     camera.tick = (dt) => {
         // Do the camera movement here

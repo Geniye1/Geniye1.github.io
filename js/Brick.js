@@ -7,7 +7,7 @@ function createBrick(x, y, z, w = 3, h = 1, d = 2, isFloor = false) {
     const geometry = new THREE.BoxBufferGeometry(w, h, d);
     const material = new THREE.MeshNormalMaterial();
     const brick = new THREE.Mesh(geometry, material);
-
+    
     brick.position.set(x, y, z);
 
     if (!isFloor) {
