@@ -12,26 +12,26 @@ const wireGeo = new THREE.EdgesGeometry(geometry);
 // Create a brick at position (x, y, z) with size (w, h, d)
 function createBrick(x, y, z, w = 3, h = 1, d = 2) {
     
-    var transparentWireMat = new THREE.MeshBasicMaterial({color: "white", wireframe: true, transparent: true, opacity: 0});
+    var transparentWireMat = new THREE.MeshBasicMaterial({color: new THREE.Color(Math.random(), Math.random(), Math.random()), wireframe: true, transparent: true, opacity: 0});
     var brickWire = new THREE.Mesh(geometry, transparentWireMat);
 
     brickWire.position.set(x, y, z);
-    brickWire.rotateX(Deg2Rad(60));
-    brickWire.rotateY(Deg2Rad(60));
+    brickWire.rotateX(Deg2Rad(150));
+    brickWire.rotateY(Deg2Rad(80));
 
     brickWire.desiredPosition = new THREE.Vector3(x, y, z);
     brickWire.desiredRotation = new THREE.Vector3(0, 0, 0);
     if (x > 0) {
-        brickWire.position.set(x + 20, y + 2, z - 55);
+        brickWire.position.set(x + 20, y + 10, z);
     }
     else {
-        brickWire.position.set(x - 20, y + 2, z - 55);
+        brickWire.position.set(x - 20, y + 10, z);
     }
     
     brickWire.tick = (dt) => {
         brickWire.material.opacity += dt;
         
-        brickWire.position.lerp(brickWire.desiredPosition, 0.5);
+        brickWire.position.lerp(brickWire.desiredPosition, 0.4);
         brickWire.rotation.setFromVector3(brickWire.rotation.toVector3().lerp(brickWire.desiredRotation, 0.15));
     };
 
