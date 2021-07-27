@@ -16,26 +16,23 @@ function createBrick(x, y, z, w = 3, h = 1, d = 2) {
     var brickWire = new THREE.Mesh(geometry, transparentWireMat);
 
     brickWire.position.set(x, y, z);
-    //brickWire.rotateX(Deg2Rad(45));
-    //brickWire.rotateY(Deg2Rad(45));
+    brickWire.rotateX(Deg2Rad(60));
+    brickWire.rotateY(Deg2Rad(60));
 
     brickWire.desiredPosition = new THREE.Vector3(x, y, z);
     brickWire.desiredRotation = new THREE.Vector3(0, 0, 0);
     if (x > 0) {
-        brickWire.position.set(x + 6, y - 2, z - 2);
+        brickWire.position.set(x + 20, y + 2, z - 55);
     }
     else {
-        brickWire.position.set(x - 6, y - 2, z - 2);
+        brickWire.position.set(x - 20, y + 2, z - 55);
     }
     
-
     brickWire.tick = (dt) => {
         brickWire.material.opacity += dt;
         
         brickWire.position.lerp(brickWire.desiredPosition, 0.5);
-        //brickWire.rotation.toVector3().lerp(brickWire.desiredRotation, 0.5);
-        
-
+        brickWire.rotation.setFromVector3(brickWire.rotation.toVector3().lerp(brickWire.desiredRotation, 0.15));
     };
 
     brickWire.destroy = () => {
