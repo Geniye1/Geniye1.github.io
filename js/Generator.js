@@ -38,10 +38,13 @@ function generateFortress() {
     world.addObject(brickR);
     world.addObject(brickL);
 
+    brickR.destroy();
+    brickL.destroy();
+
     // DEBUG DEBUG DEBUG
     // NORMALLY SETTIMEOUT IS CALLED REGARDLESS 
     if (shouldGenerate) {
-        setTimeout(generateFortress, 300);
+        setTimeout(generateFortress, 50);
     }
     
 }

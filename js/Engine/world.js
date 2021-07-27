@@ -30,6 +30,10 @@ class World {
         loop.addUpdateable(obj);
     }
 
+    removeObject(brickId) {
+        loop.removeObject(brickId);
+    }
+
     render() {
         // Draw a frame
         renderer.render(scene, camera);

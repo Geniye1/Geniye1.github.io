@@ -3,6 +3,8 @@
     animations
 */
 
+const WALK_SPEED = 4.5;
+
 function createCamera(aspectRatio) {
     let camera = new THREE.PerspectiveCamera(
         35, // fov
@@ -15,6 +17,7 @@ function createCamera(aspectRatio) {
 
     camera.tick = (dt) => {
         // Do the camera movement here
+        camera.position.z -= dt * WALK_SPEED;
     };
 
     return camera;

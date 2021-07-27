@@ -7,8 +7,8 @@ function init() {
     const rendererContainer = document.querySelector(".renderer-container");
 
     world = new World(rendererContainer);
-
-    const floor = createBrick(0, 0, 0, 7, 0.5, 100, true);
+    
+    const floor = createFloor(0, 0, 0, 7, 0.5, 100);
     world.addSceneObject(floor);
     
     world.start();

@@ -35,12 +35,19 @@ class Loop {
         this.updateables.push(obj);
     }
 
+    removeObject(id) {
+        let objIndex = this.updateables.findIndex((obj) => {
+            return obj.brickId == id;
+        });
+        this.scene.remove(this.updateables[objIndex]);
+        this.renderer.renderLists.dispose();
+        this.updateables.splice(objIndex, 1);
+        
+    }
+
     tick() {
-
         const dt = clock.getDelta();
-
         for (const object of this.updateables) {
-
             object.tick(dt);
         }
     }
