@@ -10,9 +10,9 @@ let shouldGenerate = true;
 
 let posOfLastBrick = new THREE.Vector3(CAMERA_X_OFFSET, -1, 0.75);
 
+let shouldBrickSpawn;
+
 function generateFortress() {
-    
-    // in one iteration you need to generate both the left and right side's brick
 
     // If the wall has reached the maximum height, reset back to 0 and move forward by 2.1
     // (I have no idea why it's 2.1 it should be 3 but idc 2.1 gives the brick-like-texture)
@@ -32,14 +32,18 @@ function generateFortress() {
         }
     }
     
-    // Create and add the brick object with the calculated positions
-    let brickR = createBrick(CAMERA_X_OFFSET, posOfLastBrick.y, posOfLastBrick.z);
-    let brickL = createBrick(-CAMERA_X_OFFSET, posOfLastBrick.y, posOfLastBrick.z);
-    world.addObject(brickR);
-    world.addObject(brickL);
+    // 70% of the time it will spawn a brick
+    shouldBrickSpawn = Math.random();
+    if (shouldBrickSpawn > 0.25) {
+        // Create and add the brick object with the calculated positions
+        let brickR = createBrick(CAMERA_X_OFFSET, posOfLastBrick.y, posOfLastBrick.z);
+        let brickL = createBrick(-CAMERA_X_OFFSET, posOfLastBrick.y, posOfLastBrick.z);
+        world.addObject(brickR);
+        world.addObject(brickL);
 
-    brickR.destroy();
-    brickL.destroy();
+        brickR.destroy();
+        brickL.destroy();
+    }
 
     // DEBUG DEBUG DEBUG
     // NORMALLY SETTIMEOUT IS CALLED REGARDLESS 
