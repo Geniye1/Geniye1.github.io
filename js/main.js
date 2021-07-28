@@ -20,3 +20,4 @@ window.addEventListener("keydown", (event) => {
         shouldGenerate = false;
     }
 })
+
