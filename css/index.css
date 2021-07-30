@@ -3,6 +3,11 @@
     src: url('../rsc/EspressoDolce.ttf');
 }
 
+@font-face {
+    font-family: Gentium;
+    src: url('../rsc/GenR102.TTF');
+}
+
 * {
     margin: 0;
     height: 0;
@@ -11,6 +16,22 @@
 body, html {
     height: 100%;
     overflow: hidden;
+}
+
+h1, p, li {
+    font-family: Gentium;
+    font-weight: 100;
+    color: white;
+
+    cursor: text;
+}
+
+hr {
+    position: absolute;
+    width: 20%;
+
+    top: 43%;
+    left: 39.5%;  
 }
 
 .renderer-container, canvas {
@@ -32,51 +53,75 @@ body, html {
     box-shadow: inset 0 0 120px #000, inset 0 0 80px #000, inset 0 0 40px #000;
 }
 
-h1 {
-    font-family: Espresso;
-    font-weight: 100;
-    color: white;
-}
-
 #first-name {
     position: absolute;  
-    top: 3%;
-    left: 78%;
+    top: 30%;
+    left: 37%;
 
-    font-size: 150px;
+    width: 700px;
+    height: 100px;
+
+    font-size: 100px;
 }
 
-#last-name {
-    position: absolute;  
-    top: 13%;
-    left: 68%;
+#bio-summary-desc {
+    position: absolute;
+    top: 45%;
+    left: 37%;
 
-    font-size: 150px;
+    width: 500px;
+    height: 200px;
+
+    font-size: 20px;
 }
 
-.nav-bar, .quote-box {
+.nav-bar-box {
+    position: absolute;
+    width: 90%;
+    height: 5%;
+
+    top: 8%;
+    left: 5%;
+
     background-color: #333333;
     box-shadow: 0 0 25px 50px #333333;
 
     opacity: 0.5;
 }
 
-.nav-bar {
+.nav-bar-links {
     position: absolute;
-    width: 50%;
-    height: 10%;
 
-    top: 12%;
-    left: 10%;
-
-    
+    top: 5.5%;
+    left: 5%;
 }
 
-.quote-box {
-    position: absolute;
-    width: 50%;
-    height: 40%;
+.nav-bar-links ul {
+    list-style: none;
+    position: relative;
+}
 
-    top: 40%;
-    left: 25%;
+.nav-bar-links li {
+    display: inline;
+    margin-left: 150px;
+    height: 10px;
+
+    font-size: 80px;
+
+    transition: 70ms linear;
+}
+
+.no-link:link {
+    color: white;
+    text-decoration: none;
+}
+
+.no-link:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.no-link:hover {
+    background-color: #444444;
+    box-shadow: 0 0 25px 20px #444444;
 }
