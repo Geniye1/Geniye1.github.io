@@ -107,7 +107,9 @@ hr {
     height: 10px;
 
     font-size: 80px;
+}
 
+.no-link {
     transition: 70ms linear;
 }
 

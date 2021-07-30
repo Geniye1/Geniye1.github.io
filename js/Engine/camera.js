@@ -20,6 +20,9 @@ function createCamera(aspectRatio) {
     
     camera.position.set(0, 4, 20);
 
+    // TODO:
+    // Chief you gotta remove the tick function and replace it with a recursive function like in Generator.js
+    // i cant take this anymore the camera keeps outrunning the generation its mocking me
     camera.tick = (dt) => {
         // Do the camera movement here
         camera.position.z -= dt * WALK_SPEED;
