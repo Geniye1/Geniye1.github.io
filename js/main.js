@@ -13,6 +13,8 @@ function init() {
     
     world.start();
     generateFortress();
+
+    spawnQuotes();
 }
 
 window.addEventListener("keydown", (event) => {
