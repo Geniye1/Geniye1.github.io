@@ -20,7 +20,8 @@ const quoteList = [
 let quoteParent, quoteTag, quoteText;
 let baseQuoteStyle = {
     "position": "absolute",
-    "font-size": "22px"
+    "font-size": "22px",
+    "display": "none"
 }
 
 function addCss(element, style) {
@@ -40,16 +41,8 @@ function spawnQuotes() {
     quoteTag = document.createElement("p");
     quoteTag.id = "current-quote";
 
+    // Set the text to the quote and author
     quoteTag.innerText += randomQuoteObj.quote + "\n" + randomQuoteObj.author;
-    //quoteTag.appendChild("<br>");
-    //quoteTag.textContent += randomQuoteObj.author;
-
-    /*quoteText = document.createTextNode(randomQuoteObj.quote);
-    quoteText.appendChild(quoteText);
-
-    quoteTag.appendChild("<br>");
-    quoteText = document.createTextNode(randomQuoteObj.author);
-    quoteTag.appendChild(quoteText);*/
 
     currentQuoteStyle = baseQuoteStyle;
     currentQuoteStyle.top = getRandomNumber(20, 80) + '%';
@@ -69,10 +62,15 @@ function spawnQuotes() {
 
     quoteParent.appendChild(quoteTag);
 
+    // JQuery fade in animations
+    $("#current-quote").fadeIn(500);
+
     // Wait a second or two and remove the quote, then call spawnQuotes again
     setTimeout(() => {
-        document.getElementById("current-quote").remove();
-        spawnQuotes();
-    }, (Math.random() * (7000 - 5000) + 5000))
+        $("#current-quote").fadeOut(500, () => {
+            document.getElementById("current-quote").remove();
+            spawnQuotes();
+        })
+    }, (Math.random() * (7000 - 5000) + 5000));
 }
 
